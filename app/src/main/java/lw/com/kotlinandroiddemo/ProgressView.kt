@@ -2,6 +2,7 @@ package lw.com.kotlinandroiddemo
 
 import android.content.Context
 import android.graphics.Canvas
+import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.RectF
 import android.util.AttributeSet
@@ -27,6 +28,10 @@ class ProgressView : View {
         paint.strokeCap = Paint.Cap.ROUND
         paint.isAntiAlias = true
 
+        paint.color = Color.LTGRAY
+        canvas?.drawCircle(300f, 300f, 200f, paint)
+
+        paint.color = Color.DKGRAY
         canvas?.drawArc(RectF(100f, 100f, 500f, 500f),
                 180f, 360*(progress)/100f, false, paint)
 
