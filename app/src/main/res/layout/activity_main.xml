@@ -4,7 +4,14 @@
     android:layout_height="match_parent">
 
     <lw.com.kotlinandroiddemo.ProgressView
+        android:id="@+id/progress_view"
+        android:layout_width="400dp"
+        android:layout_height="400dp" />
+
+    <Button
+        android:id="@+id/click_btn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="点击"/>
 
 </LinearLayout>

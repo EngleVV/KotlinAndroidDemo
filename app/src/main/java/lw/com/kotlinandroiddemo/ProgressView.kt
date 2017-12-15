@@ -3,6 +3,7 @@ package lw.com.kotlinandroiddemo
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
+import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.View
 
@@ -10,7 +11,8 @@ import android.view.View
  * Created by engle on 2017/12/14.
  */
 class ProgressView : View {
-    var progress: Int = 0
+
+    private var progress: Int = 10
 
     constructor(context: Context) : super(context)
 
@@ -20,15 +22,20 @@ class ProgressView : View {
         super.onDraw(canvas)
 
         var paint = Paint()
-        paint.strokeWidth = 10f
-        paint.strokeCap = Paint.Cap.BUTT
+        paint.style = Paint.Style.STROKE
+        paint.strokeWidth = 20f
+        paint.strokeCap = Paint.Cap.ROUND
+        paint.isAntiAlias = true
 
+        canvas?.drawArc(RectF(100f, 100f, 500f, 500f),
+                180f, 360*(progress)/100f, false, paint)
 
-//        canvas?.drawArc(RectF(100f, 100f, 500f, 500f),
-//                180f, 90f, false, paint)
-
-        canvas?.drawCircle(200f, 200f, 100f, paint)
-
-
+        //canvas?.drawCircle(200f, 200f, 100f, paint)
     }
+
+    fun setProgress(progress: Int){
+        this.progress = progress
+        invalidate()
+    }
+
 }
