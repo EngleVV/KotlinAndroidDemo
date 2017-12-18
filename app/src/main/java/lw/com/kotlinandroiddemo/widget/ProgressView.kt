@@ -1,4 +1,4 @@
-package lw.com.kotlinandroiddemo
+package lw.com.kotlinandroiddemo.widget
 
 import android.content.Context
 import android.graphics.Canvas

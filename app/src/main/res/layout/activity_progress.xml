@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<lw.com.kotlinandroiddemo.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<lw.com.kotlinandroiddemo.widget.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <lw.com.kotlinandroiddemo.ProgressView
+    <lw.com.kotlinandroiddemo.widget.ProgressView
         android:id="@+id/progress_view"
         android:layout_width="200dp"
         android:layout_height="200dp" />
@@ -14,4 +14,4 @@
         android:layout_height="wrap_content"
         android:text="点击"/>
 
-</lw.com.kotlinandroiddemo.MyLinearLayout>
+</lw.com.kotlinandroiddemo.widget.MyLinearLayout>
